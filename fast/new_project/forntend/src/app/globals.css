@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --page: #f4efe8;
+  --card: #fff9f0;
+  --ink: #201b16;
+  --muted: #6b6256;
+  --accent: #d4472f;
+  --sea: #2f6f67;
+  --shadow: 0 24px 60px rgba(32, 27, 22, 0.12);
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-sea: var(--sea);
+  --shadow-soft: var(--shadow);
+  --font-sans: var(--font-body);
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+@layer utilities {
+  .bg-page {
+    background: var(--page);
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(90deg, rgba(32, 27, 22, 0.06) 1px, transparent 1px),
+      linear-gradient(rgba(32, 27, 22, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid rgba(32, 27, 22, 0.12);
+    box-shadow: var(--shadow);
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff7f1;
+  }
+
+  .btn-outline {
+    border: 1px solid rgba(32, 27, 22, 0.3);
+  }
+}

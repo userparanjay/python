@@ -1,0 +1,15 @@
+dist={
+    "name":"paranjay",
+    "cgpa":9.0,
+    "marks":[10,101,111],
+    12:"kjgjh"
+}
+dist["surname"]="najan"
+print(dist['name'])
+print(dist.keys())
+print(len(dist))
+print(list(dist.values()))
+print(dist.items())
+new_dict={"age":55}
+dist.update(new_dict)
+print(dist)
